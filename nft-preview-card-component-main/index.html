@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"> <!-- enables compatibility mode -->
+  <meta name="description" content="Frontend Mentor | NFT preview card component | devvsakib ">
+  <meta author="devvsakib">
+  <meta name="keywords"
+    content="Frontend Mentor, NFT preview card component, devvsakib, devvsakib frontend developer, devvsakib.me, devvsakib.github.io/nft-preview-card-component">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | NFT preview card component | DevvSakib</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+
+  <style type="text/tailwindcss">
+    @layer components {
+        .bg-color {
+            @apply bg-[#0d192b];
+        }
+    }
+</style>
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: #00fff7;
+    }
+  </style>
+</head>
+
+<body class="bg-color">
+
+  <section class="h-[100vh] w-[100vw] grid items-center justify-center">
+    <div class="w-[20rem] bg-[#14253d] p-[1.5rem] rounded-xl  text-[#8bacda]">
+      <div>
+        <img class="w-72 rounded-lg" src="images/image-equilibrium.jpg" alt="">
+      </div>
+      <h2 class="text-white font-semibold text-2xl my-4">Equilibrium #3429</h2>
+      <p>
+        Our Equilibrium collection promotes balance and calm.
+      </p>
+      <div class="flex justify-between mt-4">
+        <div class="flex flex-1 gap-3 w-auto text-[#00fff7] items-center">
+          <img src="images/icon-ethereum.svg"  alt="">
+          <p class="font-bold">0.041 ETH</p>
+        </div>
+          <div class="flex flex-1 gap-1 justify-end w-auto items-center">
+            <img src="images/icon-clock.svg" class="w-4 h-4" alt="">
+            <p class="font-semibold">
+              3 days left
+            </p>
+          </div>
+      </div>
+      <hr class="my-4 border-[#ddd]/30">
+      <div class="flex gap-3 font-semibold items-center">
+        <img src="images/MainProfilePicture2.png" class="w-8 border-white border-2 rounded-full" alt="">
+        <p>
+          Creation of <span class="text-white hover:text-[#00fff7]"> <a href="https://github.com/devvsakib">DevvSakib</a></span>
+        </p>
+      </div>
+    </div>
+    <div class="attribution text-white">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/devvsakib">DevvSakib</a>.
+    </div>
+  </section>
+
+</body>
+
+</html>
