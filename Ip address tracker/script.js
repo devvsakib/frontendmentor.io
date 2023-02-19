@@ -9,7 +9,8 @@ const fetchUrl = url + ip + "?fields=" + field;
 let lat = 0;
 let lng = 0;
 
-if (val.value == "") {
+const mapAlert = document.getElementById("map");
+(function () {
     fetch("https://ipgeolocation.abstractapi.com/v1/?api_key=619acadbe8234a1fa82573aef65d9496")
         .then(response => response.json())
         .then(data => {
@@ -22,8 +23,9 @@ if (val.value == "") {
             docDiv.children[4].children[1].innerText = data.connection.isp_name;
             val.value = data.ip_address;
             initMap();
+            mapAlert.children[1].style.display = "none"
         })
-}
+})();
 
 submit.addEventListener("click", () => {
     fetch(url + val.value)
@@ -37,11 +39,11 @@ submit.addEventListener("click", () => {
             docDiv.children[3].children[1].innerText = data.region_iso_code + ' ' + data.timezone.abbreviation;
             docDiv.children[4].children[1].innerText = data.connection.isp_name;
             initMap();
+            mapAlert.children[1].style.display = "none"
         }
         );
 })
 
-// Initialize and add the map
 function initMap() {
     const uluru = { lat: lat, lng: lng };
     const map = new google.maps.Map(document.getElementById("map"), {

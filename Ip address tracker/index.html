@@ -34,7 +34,7 @@
   </style>
   <style>
     #map {
-      height: 80vh;
+      height: 400px;
       width: 100%;
     }
 
@@ -50,11 +50,10 @@
 </head>
 
 <body class="font-[rubik]">
-  <section class="bg-black h-[100vh] w-[100%]">
-    <div class="text-white py-10 pb-32 bg-[url(./images/pattern-bg.png)] bg-cover bg-no-repeat">
-      <img src="" id="imgGen" alt="">
+  <section class="bg-black relative h-[100vh] w-[100%]">
+    <div class="text-white py-10 pb-20 md:pb-32 bg-[url(./images/pattern-bg.png)] bg-cover bg-no-repeat">
       <h2 class="text-4xl  font-[500] tracking-wide text-center">IP Address Tracker</h2>
-      <div class="w-[40%]  mx-auto flex items-center my-10">
+      <div class="md:w-[40%] mx-10  md:mx-auto flex items-center my-10">
         <input id="ipAddress" class="flex-1 -mr-2 rounded-l-[1rem] py-4 px-4 outline-none text-xl text-black"
           type="text" placeholder="Search for any IP address or domain">
         <button id="submit" class="bg-black py-4 px-6 text-xl rounded-r-[1rem]">
@@ -62,27 +61,29 @@
         </button>
       </div>
     </div>
-    <div class="flex flex-col justify-center items-center relative -top-20">
-      <div id="doc-div" class="flex w-[86vw] z-[2] justify-between bg-white rounded-[1rem] relative py-16 px-10">
+    <div class="flex flex-col justify-center items-center">
+      <div id="doc-div"
+        class="flex flex-col gap-4 lg:gap-0 lg:flex-row w-[86vw] z-[2] justify-between bg-white rounded-[1rem] relative py-16 px-10  absolute -top-24 left-0 right-0">
         <img src="" class="w-10 absolute top-5 left-5" alt="Flag">
         <div class="flex flex-col justify-between ">
-          <h3 class="text-md font-[600] uppercase text-black/40">IP Address</h3>
-          <p class="text-3xl font-[500] text-black/80">0.0.0.0</p>
+          <h3 class="text-sm md:text-md font-[600] uppercase text-black/40">IP Address</h3>
+          <p class="text-xl md:text-3xl font-[500] text-black/80">0.0.0.0</p>
         </div>
-        <div class="flex flex-col justify-between border-l-2 pl-10">
-          <h3 class="text-md font-[600] uppercase text-black/40">Location</h3>
-          <p class="text-3xl font-[500] text-black/80">Mars</p>
+        <div class="flex flex-col justify-between lg:border-l-2 lg:pl-10">
+          <h3 class="text-sm md:text-md font-[600] uppercase text-black/40">Location</h3>
+          <p class="text-xl md:text-3xl font-[500] text-black/80">Mars</p>
         </div>
-        <div class="flex flex-col justify-between border-l-2 pl-10">
-          <h3 class="text-md font-[600] uppercase text-black/40">Timezone</h3>
-          <p class="text-3xl font-[500] text-black/80">+0:00</p>
+        <div class="flex flex-col justify-between lg:border-l-2 lg:pl-10">
+          <h3 class="text-sm md:text-md font-[600] uppercase text-black/40">Timezone</h3>
+          <p class="text-xl md:text-3xl font-[500] text-black/80">+0:00</p>
         </div>
-        <div class="flex flex-col justify-between border-l-2 pl-10">
-          <h3 class="text-md font-[600] uppercase text-black/40">ISP</h3>
-          <p class="text-3xl font-[500] text-black/80 break-all">Unknown</p>
+        <div class="flex flex-col justify-between lg:border-l-2 lg:pl-10">
+          <h3 class="text-sm md:text-md font-[600] uppercase text-black/40">ISP</h3>
+          <p class="text-xl md:text-3xl font-[500] text-black/80 break-all">Unknown</p>
         </div>
       </div>
-      <div id="map" class="relative -top-28 z-1"></div>
+      <div id="map" class="relative lg:-top-[210px] -top-[400px] z-1"></div>
+    </div>
   </section>
 
   <script>
