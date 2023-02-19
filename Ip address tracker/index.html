@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <meta name="description" content="IP Address Tracker">
+  <meta name="keywords" content="IP Address Tracker">
+  <meta name="author" content="DevvSakib">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&family=Rubik:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>Frontend Mentor | IP Address Tracker</title>
+  <!-- remember this script link for forever -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="script.js"></script>
+  <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAFnAjeErSFPHePdSF-u7N5NVqu3Y49I0&callback=initMap&v=weekly"></script>
+
+
+  <style type="text/tailwindcss">
+    @layer components {
+      .bg-color {
+        @apply bg-[#0d192b];
+      }
+    }
+  </style>
+  <style>
+    #map {
+      height: 80vh;
+      width: 100%;
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body class="font-[rubik]">
+  <section class="bg-black h-[100vh] w-[100%]">
+    <div class="text-white py-10 pb-32 bg-[url(./images/pattern-bg.png)] bg-cover bg-no-repeat">
+      <img src="" id="imgGen" alt="">
+      <h2 class="text-4xl  font-[500] tracking-wide text-center">IP Address Tracker</h2>
+      <div class="w-[40%]  mx-auto flex items-center my-10">
+        <input id="ipAddress" class="flex-1 -mr-2 rounded-l-[1rem] py-4 px-4 outline-none text-xl text-black"
+          type="text" placeholder="Search for any IP address or domain">
+        <button id="submit" class="bg-black py-4 px-6 text-xl rounded-r-[1rem]">
+          <i class="fa fa-angle-right" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+    <div class="flex flex-col justify-center items-center relative -top-20">
+      <div id="doc-div" class="flex w-[86vw] z-[2] justify-between bg-white rounded-[1rem] relative py-16 px-10">
+        <img src="" class="w-10 absolute top-5 left-5" alt="Flag">
+        <div class="flex flex-col justify-between ">
+          <h3 class="text-md font-[600] uppercase text-black/40">IP Address</h3>
+          <p class="text-3xl font-[500] text-black/80">0.0.0.0</p>
+        </div>
+        <div class="flex flex-col justify-between border-l-2 pl-10">
+          <h3 class="text-md font-[600] uppercase text-black/40">Location</h3>
+          <p class="text-3xl font-[500] text-black/80">Mars</p>
+        </div>
+        <div class="flex flex-col justify-between border-l-2 pl-10">
+          <h3 class="text-md font-[600] uppercase text-black/40">Timezone</h3>
+          <p class="text-3xl font-[500] text-black/80">+0:00</p>
+        </div>
+        <div class="flex flex-col justify-between border-l-2 pl-10">
+          <h3 class="text-md font-[600] uppercase text-black/40">ISP</h3>
+          <p class="text-3xl font-[500] text-black/80 break-all">Unknown</p>
+        </div>
+      </div>
+      <div id="map" class="relative -top-28 z-1"></div>
+  </section>
+
+  <script>
+
+  </script>
+  <!-- 
+  IP Address Tracker
+
+  Search for any IP address or domain
+
+  IP Address
+  Location
+  Timezone
+  UTC 
+  ISP
+  
+  add offset value dynamically using the API -->
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">DevvSakib</a>.
+  </div> -->
+</body>
+
+</html>
