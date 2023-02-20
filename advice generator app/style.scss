@@ -1,0 +1,89 @@
+
+// Font import from Google
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&display=swap');
+:root{
+    --primary-color: hsl(193, 38%, 86%);
+    --secondary-color: hsl(150, 100%, 66%);
+    --grayish: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+
+    --font-family: Manrope;
+}
+
+
+body{
+    overflow: hidden;
+    background-color: var(--dark-blue);
+    font-family: var(--font-family);
+    color: var(--primary-color);
+    display: grid;
+    place-items: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.card_container{
+    width: 40vw;
+    height: auto;
+    background-color: var(--dark-grayish-blue);
+    padding: 40px 40px 30px 40px;
+    border-radius: 15px;
+    text-align: center;
+    font-weight:  800;
+}
+.title{
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: .8rem;
+    font-weight: 600;
+}
+#quote_here{
+    font-size: 1.4rem;
+}
+.middleCircle i {
+    background-color: var(--dark-grayish-blue);
+    line-height: 50px;
+    font-size: 1.4rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.line{
+    margin-top: -45px;
+    color: var(--grayish);
+}
+#genQuote{
+    border: none;
+    background-color: var(--secondary-color);
+    color: var(--dark-blue);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    bottom: -50px;
+    cursor: pointer;
+    transition: all 250ms;
+    i{
+        font-size: 1.6rem;
+    }
+}
+#genQuote:hover{
+    box-shadow: 0 0 20px var(--secondary-color);
+}
+.si{
+    font-size: .8rem;
+}
+.animate{
+    animation: rotateAll .5s linear infinite;
+}
+@keyframes rotateAll {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

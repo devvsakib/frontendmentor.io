@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Advice generator app</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <section class="container">
+    <div class="card_container">
+      <div class="mainCard">
+        <h4 class="title"> Advice #<span id="quote_no"></span></h4>
+
+
+        <p id="quote_here">
+        </p>
+        <div class="bottomOutline">
+          <p class="middleCircle"><i class="fa fa-pause" aria-hidden="true"></i></p>
+          <hr class="line">
+        </div>
+      </div>
+      <div class="rollQuote">
+        <button id="genQuote"><i class="fas fa-dice-five " aria-hidden="true"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
