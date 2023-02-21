@@ -108,7 +108,7 @@ const Details = () => {
                 countryDetails?.map(({ region, languages, currencies, borders, population, tld, capital, name, flags, subregion }, idx) => (
                   <div className='px-10 grid gap-20 grid-cols-1 lg:grid-cols-2 items-start mt-24 mb-20' key={idx}>
                     <div className='lg:pr-10'>
-                      <img className='w-full h-auto' src={flags.png} alt={flags.alt} />
+                      <img className='w-full h-auto' src={flags.png} alt={flags.alt}  accessKey={flags.alt}/>
                     </div>
                     <div className='flex flex-col justify-between md:mt-20'>
 
