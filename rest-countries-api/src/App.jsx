@@ -1,15 +1,25 @@
 import './App.css'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Header from './component/Header/Header'
 import Home from './pages/Home';
 import Details from './pages/Details';
 
 function App() {
-  const [theme, setTheme] = useState(false);
+  const [theme, setTheme] = useState(false)
+  let themes;
+  if (localStorage) {
+    themes = localStorage.getItem("theme")
+  } 
+  if (theme == 'true') {
+    document.body.classList.add("dark")
+  } else {
+    document.body.classList.remove("dark")
+  }
+
   const darkMode = () => {
-    document.body.classList.toggle('dark');
     setTheme(!theme)
+    localStorage.setItem("theme", theme)
   }
   return (
     <div className="App  dark:text-white text-[#111517]">
